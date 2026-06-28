@@ -2496,8 +2496,8 @@ function renderStockList() {
 
 var tourneyCost = 1000;
 var tourneyLvl = 1;
-var choiceANames = ["cooperate", "swerve", "macro", "fight", "bet", "raise_price", "opera", "go", "heads", "particle", "discrete", "peace", "search", "lead", "accept", "accept", "attack"];
-var choiceBNames = ["defect", "straight", "micro", "back_down", "fold", "lower_price", "football", "stay", "tails", "wave", "continuous", "war", "evaluate", "follow", "reject", "deny", "decay"];
+var choiceANames = ["合作", "让步", "宏观", "对抗", "下注", "涨价", "歌剧", "走", "正面", "粒子", "离散", "和平", "搜索", "领导", "接受", "接受", "攻击"];
+var choiceBNames = ["背叛", "直行", "微观", "退让", "弃牌", "降价", "足球", "留", "反面", "波动", "连续", "战争", "评估", "跟随", "拒绝", "否认", "衰变"];
 var stratCounter = 0;
 var roundNum = 0;
 var hMove = 1;
@@ -4353,7 +4353,7 @@ function numberCruncher(number, decimals){
 var oneToTen = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"],
     elevenToNineteen = ['十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九'],
     multipleOfTen = ['', '', '二十', '三十', '四十', '五十', '六十', '七十', '八十', '九十'],
-    placeValue = ["", " 千 ", " 百万 ", " 十亿 ", " 万亿 ", " 千万亿 ", " 百京 ", " 十垓 ", " 秭 ", " 千秭 ", " 穰 ", " 沟 ", " 涧 ", " 正 ", " 载 ", " 极 ", " 恒河沙 ", " 阿僧祇 ", " 那由他 ", " octodecillion ", " novemdecillion  ", " vigintillion ", " unvigintillion ", " duovigintillion ", " trevigintillion ", " quattuorvigintillion ", " quinvigintillion ", " sexvigintillion ", " septenvigintillion ", " octovigintillion ", " novemvigintillion ", " trigintillion ", " untrigintillion ", " duotrigintillion ", " tretrigintillion ", " quattuortrigintillion ", " quintrigintillion ", " sextrigintillion ", " septentrigintillion ", " octotrigintillion ", " novemtrigintillion ", " quadragintillion ", " unquadragintillion ", " duoquadragintillion ", " trequadragintillion ", " quattuorquadragintillion ", " quinquadragintillion ", " sexquadragintillion ", " septenquadragintillion ", " octoquadragintillion ", " novemquadragintillion ", " quinquagintillion ", " unquinquagintillion ", " duoquinquagintillion ", " trequinquagintillion ", " quattuorquinquagintillion ", " quinquinquagintillion ", " sexquinquagintillion ", " septenquinquagintillion ", " octoquinquagintillion ", " novemquinquagintillion ", " sexagintillion ", " unsexagintillion ", " duosexagintillion ", " tresexagintillion ", " quattuorsexagintillion ", " quinsexagintillion ", " sexsexagintillion ", " septsexagintillion ", " octosexagintillion ", " octosexagintillion ", " septuagintillion ", " unseptuagintillion ", " duoseptuagintillion ", " treseptuagintillion ", " quinseptuagintillion"," sexseptuagintillion"," septseptuagintillion"," octoseptuagintillion"," novemseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"," treoctogintillion"," quattuoroctogintillion"," quinoctogintillion"," sexoctogintillion"," septoctogintillion"," octooctogintillion"," novemoctogintillion"," nonagintillion"," unnonagintillion"," duononagintillion", " trenonagintillion "," quattuornonagintillion "," quinnonagintillion "," sexnonagintillion "," septnonagintillion "," octononagintillion "," novemnonagintillion ", " centillion"];
+    placeValue = ["", " 千 ", " 百万 ", " 十亿 ", " 万亿 ", " 千万亿 ", " 百京 ", " 十垓 ", " 秭 ", " 千秭 ", " 穰 ", " 沟 ", " 涧 ", " 正 ", " 载 ", " 极 ", " 恒河沙 ", " 阿僧祇 ", " 那由他 ", " 不可思议 ", " 无量大数 ", " 千古 ", " 万古 ", " 极大 ", " 无极 ", " 太虚 ", " 超太虚 ", " 无量 ", " 超无量 ", " 大数 ", " 超大数 ", " 垓极 ", " 秭极 ", " 正极 ", " 载极 ", " 极极 ", " 恒河极 ", " 阿僧极 ", " 那由极 ", " 不可极 ", " 无量极 ", " 千古极 ", " 万古极 ", " 极大极 ", " 无极极 ", " 太虚极 ", " 超太虚极 ", " 无量极2 ", " 超无量极2 ", " 大数极 ", " 超大数极 ", " 垓极极 ", " 秭极极 ", " 正极极 ", " 载极极 ", " 极极极 ", " 恒河极极 ", " 阿僧极极 ", " 那由极极 ", " 不可极极 ", " 无量极极3 ", " 千古极极 ", " 万古极极 ", " 极大极极 ", " 无极极极 ", " 太虚极极 ", " 超太虚极极 ", " 无量终极 ", " 超无量终极 ", " 大数终极 ", " 超大数终极 ", " 垓终极 ", " 秭终极 ", " 正终极 ", " 载终极 ", " 极终极 ", " 恒河终极 ", " 阿僧终极 ", " 那由终极 ", " 不可终极 ", " 无量至高 ", " 千古至高 ", " 万古至高 ", " 极大至高 ", " 无极至高 ", " 太虚至高 ", " 超太虚至高 ", " 无量至高2 ", " 超无量至高2 ", " 大数至高 ", " 超大数至高 ", " 垓至高 ", " 秭至高 ", " 正至高 ", " 载至高 ", " 极至高 ", " 恒河至高 ", " 阿僧至高 ", " 那由至高 ", " 不可至高 ", " 无量至极 ", " 千古至极 ", " 万古至极 ", " 极大至极 ", " 无极至极 ", " 太虚至极 ", " 超太虚至极 ", " 终极至极 ", " 超终极至极 ", " 大数至极 ", " 超大数至极 ", " 垓至极 ", " 秭至极 ", " 正至极 ", " 载至极 ", " 极至极 ", " 恒河至极 ", " 阿僧至极 ", " 那由至极 ", " 不可至极 ", " 无穷 ", " 不可说 ", " 不可说不可说 ", " 无量无尽 ", " 古戈尔", " centillion"];
 
 function spellf(userInput) {
     var numToWorkOn;
@@ -4439,7 +4439,7 @@ function spellf(userInput) {
                 var subStr = stringEquivalent.substring(k, k - 3);
                 pronounce = pronounceNum(subStr);
 
-            if (pronounce.toUpperCase() != 'zero') {
+            if (pronounce.toUpperCase() != '零') {
                 var num = Number(subStr + "." + stringEquivalent.substring(subStr.length, subStr.length + 2));
                 result = formatWithCommas(num, 1) + placeValue[unitLookup] + ' , '+ result;
             }
