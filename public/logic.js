@@ -1,4 +1,4 @@
-function applyProjectDefaults(config, defaults) {
+﻿function applyProjectDefaults(config, defaults) {
   for(let property in defaults) {
     if (config[property] === undefined) {
       config[property] = defaults[property];
@@ -755,7 +755,7 @@ function updateClipRate() {
 }
 
 function reportInvestmentRevenue () {
-  displayMessage("Lifetime investment revenue report: $" + formatWithCommas(ledger + portTotal));
+  displayMessage("终身投资回报报告：$" + formatWithCommas(ledger + portTotal));
 }
 
 function calculateFactoryClips() {
@@ -1504,10 +1504,10 @@ function adjustWirePrice(){
 function toggleWireBuyer(){
     if (wireBuyerStatus==1){
         wireBuyerStatus=0;
-        wireBuyerStatusElement.innerHTML = "OFF";
+        wireBuyerStatusElement.innerHTML = "关闭";
     } else {
         wireBuyerStatus=1;
-        wireBuyerStatusElement.innerHTML = "ON";
+        wireBuyerStatusElement.innerHTML = "开启";
     }
 }
 
@@ -1634,7 +1634,7 @@ function qComp(){
 
 
     if (qChips[0].active == 0){
-        qCompDisplayElement.innerHTML = "Need Photonic Chips";
+        qCompDisplayElement.innerHTML = "需要光子芯片";
     } else {
     for (var i = 0; i<qChips.length; i++){
         q = q+qChips[i].value;
@@ -1652,7 +1652,7 @@ function qComp(){
             }
 
         standardOps = standardOps + qq;
-        qCompDisplayElement.innerHTML = "qOps: " + formatWithCommas(Math.ceil(q*360));
+        qCompDisplayElement.innerHTML = "量子运算: " + formatWithCommas(Math.ceil(q*360));
     }
 
 }
@@ -1769,19 +1769,19 @@ function longBlink(element){
     longBlinkCounter++;
 
     if (longBlinkCounter > 5 && longBlinkCounter < 10){
-        hypnoDroneTextElement.innerHTML="Release";
+        hypnoDroneTextElement.innerHTML="释放";
         }
 
     if (longBlinkCounter > 30 && longBlinkCounter < 40){
-        hypnoDroneTextElement.innerHTML="<br /><br /><br />Release";
+        hypnoDroneTextElement.innerHTML="<br /><br /><br />释放";
         }
 
     if (longBlinkCounter > 45 && longBlinkCounter < 55){
-        hypnoDroneTextElement.innerHTML="<br />Release";
+        hypnoDroneTextElement.innerHTML="<br />释放";
         }
 
      if (longBlinkCounter > 55){
-        hypnoDroneTextElement.innerHTML="Release<br/>the<br/>Hypno<br/>Drones";
+        hypnoDroneTextElement.innerHTML="释放<br/>催眠<br/>无人机";
         }
 
     if (longBlinkCounter >= 120){
@@ -1801,7 +1801,7 @@ function longBlink(element){
     }
 
 function hypnoDroneEvent(){
-    hypnoDroneTextElement.innerHTML="Release";
+    hypnoDroneTextElement.innerHTML="释放";
     longBlink(hypnoDroneEventDivElement);
 }
 
@@ -1868,11 +1868,11 @@ function buttonUpdate(){
         mpdsDivElement.style.display="";
     }
 
-    factoryRebootToolTipElement.innerHTML = "+" + spellf(factoryBill)+" clips";
-    havesterRebootToolTipElement.innerHTML = "+" + spellf(harvesterBill)+" clips";
-    wireDroneRebootToolTipElement.innerHTML = "+" + spellf(wireDroneBill)+" clips";
-    farmRebootToolTipElement.innerHTML = "+" + spellf(farmBill)+" clips";
-    batteryRebootToolTipElement.innerHTML = "+" + spellf(batteryBill)+" clips";
+    factoryRebootToolTipElement.innerHTML = "+" + spellf(factoryBill)+" 回形针";
+    havesterRebootToolTipElement.innerHTML = "+" + spellf(harvesterBill)+" 回形针";
+    wireDroneRebootToolTipElement.innerHTML = "+" + spellf(wireDroneBill)+" 回形针";
+    farmRebootToolTipElement.innerHTML = "+" + spellf(farmBill)+" 回形针";
+    batteryRebootToolTipElement.innerHTML = "+" + spellf(batteryBill)+" 回形针";
 
 
     if (swarmFlag == 1){
@@ -2282,7 +2282,7 @@ function investUpgrade(){
     investUpgradeCost = Math.floor(Math.pow(investLevel+1, Math.E)*100);
     investUpgradeCostElement.innerHTML = formatWithCommas(investUpgradeCost);
     yomiDisplayElement.innerHTML = formatWithCommas(yomi);
-    displayMessage("Investment engine upgraded, expected profit/loss ratio now "+stockGainThreshold);
+    displayMessage("投资引擎已升级，预期盈亏比现为 "+stockGainThreshold);
 }
 
 
@@ -2536,7 +2536,7 @@ var payoffGrid = {
 }
 
 var stratRandom = {
-    name: "RANDOM",
+    name: "随机",
     active: 1,
     currentScore: 0,
     currentPos: 1,
@@ -2580,7 +2580,7 @@ var stratB100 = {
 allStrats.push(stratB100);
 
 var stratGreedy = {
-    name: "GREEDY",
+    name: "贪婪",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -2597,7 +2597,7 @@ var stratGreedy = {
 allStrats.push(stratGreedy);
 
 var stratGenerous = {
-    name: "GENEROUS",
+    name: "慷慨",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -2616,7 +2616,7 @@ var stratGenerous = {
 allStrats.push(stratGenerous);
 
 var stratMinimax = {
-    name: "MINIMAX",
+    name: "极小极大",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -2635,7 +2635,7 @@ var stratMinimax = {
 allStrats.push(stratMinimax);
 
 var stratTitfortat = {
-    name: "TIT FOR TAT",
+    name: "以牙还牙",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -2654,7 +2654,7 @@ var stratTitfortat = {
 allStrats.push(stratTitfortat);
 
 var stratBeatlast = {
-    name: "BEAT LAST",
+    name: "击败上次",
     active: 0,
     currentScore: 0,
     currentPos: 1,
@@ -2778,10 +2778,10 @@ function generateGrid(){
 function toggleAutoTourney(){
     if (autoTourneyStatus==1){
         autoTourneyStatus=0;
-        autoTourneyStatusElement.innerHTML = "OFF";
+        autoTourneyStatusElement.innerHTML = "关闭";
     } else {
         autoTourneyStatus=1;
-        autoTourneyStatusElement.innerHTML = "ON";
+        autoTourneyStatusElement.innerHTML = "开启";
     }
 }
 
@@ -2808,7 +2808,7 @@ function newTourney(){
     btnRunTournamentElement.disabled = false;
     vertStratElement.innerHTML = "&nbsp";
     horizStratElement.innerHTML = "&nbsp";
-    tourneyDisplayElement.innerHTML = "Pick strategy, run tournament, gain yomi";
+    tourneyDisplayElement.innerHTML = "选择策略，运行锦标赛，获取约米";
 
 
 }
@@ -2928,13 +2928,13 @@ function declareWinner(){
            bB=beatBoost;
           }
 
-       tourneyReport("TOURNAMENT RESULTS (roll over for payoff grid)");
+       tourneyReport("锦标赛结果（悬停查看收益网格）");
        yomi = yomi + strats[pick].currentScore * yomiBoost * beatBoost;
        yomiDisplayElement.innerHTML = formatWithCommas(yomi);
 
     if (milestoneFlag < 15){
 
-       displayMessage(strats[pick].name+" scored "+strats[pick].currentScore+" and beat "+bB+" "+w+". Yomi increased by "+strats[pick].currentScore * yomiBoost * beatBoost);
+       displayMessage(strats[pick].name+" 得分 "+strats[pick].currentScore+"，击败了 "+bB+" "+w+". 约米增加了 "+strats[pick].currentScore * yomiBoost * beatBoost);
 
         }
 
@@ -2942,27 +2942,27 @@ function declareWinner(){
             yomi = yomi + 50000;
 
             if (milestoneFlag < 15){
-                displayMessage("Selected strategy won the tournament (or tied for first). +50,000 yomi");
+                displayMessage("选定策略赢得锦标赛（或并列第一）。+50,000 约米");
                 }
             yomiDisplayElement.innerHTML = formatWithCommas(yomi);
 
             } else if (project128.flag == 1 && placeScore == strats[pick].currentScore) {
                 yomi = yomi + 30000;
                 if (milestoneFlag < 15){
-                displayMessage("Selected strategy finished in (or tied for) second place. +30,000 yomi");
+                displayMessage("选定策略获得（或并列）第二名。+30,000 约米");
                 }
                 yomiDisplayElement.innerHTML = formatWithCommas(yomi);
 
             } else if (project128.flag == 1 && showScore == strats[pick].currentScore) {
                 yomi = yomi + 20000;
                 if (milestoneFlag < 15){
-                displayMessage("Selected strategy finished in (or tied for) third place. +20,000 yomi");
+                displayMessage("选定策略获得（或并列）第三名。+20,000 约米");
                 }
                 yomiDisplayElement.innerHTML = formatWithCommas(yomi);
 
             } else {
 
-            tourneyReport("TOURNAMENT RESULTS (roll over for grid)");
+            tourneyReport("锦标赛结果（悬停查看网格）");
 
             }
 
@@ -3079,7 +3079,7 @@ function round(roundNum){
     function roundSetup(){
         rCounter = 0;
         pickStrats(roundNum);
-        var $ = ("Round "+(roundNum+1));
+        var $ = ("回合 "+(roundNum+1));
         tourneyReport($);
     }
 
@@ -3478,7 +3478,7 @@ function updateSwarm(){
         boredomFlag = 1;
         boredomLevel = 0;
             if (boredomMsg == 0) {
-            displayMessage("No matter to harvest. Inactivity has caused the Swarm to become bored");
+            displayMessage("没有物质可采集。闲置导致蜂群变得无聊");
             boredomMsg = 1;
             }
 
@@ -3499,7 +3499,7 @@ function updateSwarm(){
     if (disorgCounter >= 100) {
         disorgFlag = 1;
         if (disorgMsg == 0) {
-            displayMessage("Imbalance between Harvester and Wire Drone levels has disorganized the Swarm");
+            displayMessage("采集无人机和金属丝无人机等级不平衡导致蜂群混乱");
             disorgMsg = 1;
             }
     }
@@ -3515,7 +3515,7 @@ function updateSwarm(){
         swarmGifts = swarmGifts + nextGift;
         swarmGiftsElement.innerHTML = formatWithCommas(swarmGifts, 0);
         if (milestoneFlag<15){
-            displayMessage("The swarm has generated a gift of "+nextGift+" additional computational capacity");
+            displayMessage("蜂群生成了一份礼物："+nextGift+" 额外计算容量");
             }
 
 //        THE OLD WAY
@@ -3569,7 +3569,7 @@ function updateSwarm(){
         giftBits = giftBits + giftBitGenerationRate;
         giftCountdown = (giftPeriod - giftBits) / giftBitGenerationRate;
 
-        swarmStatusElement.innerHTML="Active";
+        swarmStatusElement.innerHTML="活跃";
         giftCountdownElement.innerHTML= timeCruncher(giftCountdown);
         giftTimerElement.style.display="";
         } else {
@@ -3577,14 +3577,14 @@ function updateSwarm(){
         }
 
     if (swarmStatus == 1){
-        swarmStatusElement.innerHTML="Hungry";
+        swarmStatusElement.innerHTML="饥饿";
         feedButtonDivElement.style.display="";
         } else {
         feedButtonDivElement.style.display="none";
         }
 
      if (swarmStatus == 2){
-        swarmStatusElement.innerHTML="Confused";
+        swarmStatusElement.innerHTML="困惑";
         teachButtonDivElement.style.display="";
         } else {
         teachButtonDivElement.style.display="none";
@@ -3592,28 +3592,28 @@ function updateSwarm(){
 
      if (swarmStatus == 3){
         swarmEntertainCostElement.innerHTML = formatWithCommas(entertainCost);
-        swarmStatusElement.innerHTML="Bored";
+        swarmStatusElement.innerHTML="无聊";
         entertainButtonDivElement.style.display="";
         } else {
         entertainButtonDivElement.style.display="none";
         }
 
      if (swarmStatus == 4){
-        swarmStatusElement.innerHTML="Cold";
+        swarmStatusElement.innerHTML="寒冷";
         cladButtonDivElement.style.display="";
         } else {
         cladButtonDivElement.style.display="none";
         }
 
      if (swarmStatus == 5){
-        swarmStatusElement.innerHTML="Disorganized";
+        swarmStatusElement.innerHTML="混乱";
         synchButtonDivElement.style.display="";
         } else {
         synchButtonDivElement.style.display="none";
         }
 
        if (swarmStatus == 6){
-        swarmStatusElement.innerHTML="Sleeping";
+        swarmStatusElement.innerHTML="休眠";
         }
 
        if (swarmStatus == 7){
@@ -3623,11 +3623,11 @@ function updateSwarm(){
         }
 
         if (swarmStatus == 8){
-        swarmStatusElement.innerHTML="Lonely";
+        swarmStatusElement.innerHTML="孤独";
         }
 
         if (swarmStatus == 9){
-        swarmStatusElement.innerHTML="NO RESPONSE...";
+        swarmStatusElement.innerHTML="无响应...";
         }
 
 
@@ -3910,9 +3910,9 @@ function lowerPrice(){
 function updateStats(){
 
     if (wire === 1){
-        inchSpanElement.innerHTML = "inch";
+        inchSpanElement.innerHTML = "英寸";
     } else {
-        inchSpan.innerHTML = "inches";
+        inchSpan.innerHTML = "英寸";
     }
 
 
@@ -3922,35 +3922,35 @@ function updateStats(){
 
     if (milestoneFlag === 15 && dismantle ==0){
         clipsElement.innerHTML = "29,999,999,999,999,900,000,000,000,000,000,000,000,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         }
 
     if (dismantle === 1){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         }
 
     if (dismantle === 2){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,000,000,000";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         }
 
     if (dismantle === 3){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,900";
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         }
 
     if (dismantle >=4){
 
     if (finalClips<10){
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,"+"90"+finalClips;
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         } else if (finalClips>9 && finalClips<100) {
         clipsElement.innerHTML = "29,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,"+"9"+finalClips;
-        clipCountCrunchedElement.innerHTML = "29.9 septendecillion"
+        clipCountCrunchedElement.innerHTML = "29.9 十秭"
         } else if (finalClips===100) {
         clipsElement.innerHTML = "30,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000";
-        clipCountCrunchedElement.innerHTML = "30.0 septendecillion"
+        clipCountCrunchedElement.innerHTML = "30.0 十秭"
         }
 
     }
@@ -4101,7 +4101,7 @@ function calculateCreativity(number){
 function calculateTrust(){
     if (clips>(nextTrust-1)){
         trust = trust +1;
-        displayMessage("Production target met: TRUST INCREASED, additional processor/memory capacity granted");
+        displayMessage("生产目标达成：信任增加，额外处理器/内存容量已授予");
         var fibNext = fib1+fib2;
         nextTrust = fibNext*1000;
         fib1 = fib2;
@@ -4116,8 +4116,8 @@ function addProc(){
         creativitySpeed = Math.log10(processors) * Math.pow(processors,1.1) + processors-1;
         processorsElement.innerHTML = processors;
         if (creativityOn == 1){
-          displayMessage("Processor added, operations (or creativity) per sec increased")
-        } else {displayMessage("Processor added, operations per sec increased")}
+          displayMessage("处理器已添加，每秒运算（或创造力）增加")
+        } else {displayMessage("处理器已添加，每秒运算增加")}
 
         if (humanFlag == 0){
             swarmGifts = swarmGifts - 1;
@@ -4128,7 +4128,7 @@ function addProc(){
 function addMem(){
 
     if (trust>0 || swarmGifts>0){
-        displayMessage("Memory added, max operations increased");
+        displayMessage("内存已添加，最大运算量增加");
         memory=memory+1;
         memoryElement.innerHTML = memory;
         if (humanFlag == 0){
@@ -4184,93 +4184,93 @@ function milestoneCheck(){
 
     if (milestoneFlag == 0 && funds >= 5){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("AutoClippers available for purchase");
+        displayMessage("自动回形针机可供购买");
     }
 
     if (milestoneFlag == 1 && Math.ceil(clips) >= 500){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("500 clips created in " + timeCruncher(ticks));
+        displayMessage("500 个回形针创建于 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 2 && Math.ceil(clips) >= 1000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("1,000 clips created in " + timeCruncher(ticks));
+        displayMessage("1,000 个回形针创建于 " + timeCruncher(ticks));
     }
 
 
     if (compFlag == 0 && unsoldClips<1 && funds<wireCost && wire<1){
         compFlag = 1;
         projectsFlag = 1;
-        displayMessage("Trust-Constrained Self-Modification enabled");
+        displayMessage("信任约束自我修改已启用");
     }
 
     if (compFlag == 0 && Math.ceil(clips) >= 2000){
         compFlag = 1;
         projectsFlag = 1;
-        displayMessage("Trust-Constrained Self-Modification enabled");
+        displayMessage("信任约束自我修改已启用");
     }
 
 
     if (milestoneFlag == 3 && Math.ceil(clips) >= 10000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("10,000 clips created in " + timeCruncher(ticks));
+        displayMessage("10,000 个回形针创建于 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 4 && Math.ceil(clips) >= 100000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("100,000 clips created in " + timeCruncher(ticks));
+        displayMessage("100,000 个回形针创建于 " + timeCruncher(ticks));
     }
     if (milestoneFlag == 5 && Math.ceil(clips) >= 1000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("1,000,000 clips created in " + timeCruncher(ticks));
+        displayMessage("1,000,000 个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 6 && project35.flag == 1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Full autonomy attained in " + timeCruncher(ticks));
+        displayMessage("完全自主达成于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 7 && Math.ceil(clips) >= 1000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Trillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("一万亿个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 8 && Math.ceil(clips) >= 1000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Quadrillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("一千万亿个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 9 && Math.ceil(clips) >= 1000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Quintillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("一百京个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 10 && Math.ceil(clips) >= 1000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Sextillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("十垓个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 11 && Math.ceil(clips) >= 1000000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Septillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("一秭个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 12 && Math.ceil(clips) >= 1000000000000000000000000000){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("One Octillion Clips Created in " + timeCruncher(ticks));
+        displayMessage("一穰个回形针创建于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 13 && spaceFlag == 1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Terrestrial resources fully utilized in " + timeCruncher(ticks));
+        displayMessage("地球资源已完全利用于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 14 && clips>=totalMatter){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Universal Paperclips achieved in " + timeCruncher(ticks));
+        displayMessage("通用回形针已达成于 " + timeCruncher(ticks));
     }
 
     if (milestoneFlag == 14 && foundMatter>=totalMatter && availableMatter<1 && wire<1){
         milestoneFlag = milestoneFlag + 1;
-        displayMessage("Universal Paperclips achieved in " + timeCruncher(ticks));
+        displayMessage("通用回形针已达成于 " + timeCruncher(ticks));
     }
 
 }
@@ -4281,9 +4281,9 @@ function timeCruncher(t){
     var m = Math.floor(x % 3600 / 60);
     var s = Math.floor(x % 3600 % 60);
 
-    var hDisplay = h > 0 ? h + (h == 1 ? " hour " : " hours ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? " minute " : " minutes ") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
+    var hDisplay = h > 0 ? h + (h == 1 ? " 小时 " : " 小时 ") : "";
+    var mDisplay = m > 0 ? m + (m == 1 ? " 分钟 " : " 分钟 ") : "";
+    var sDisplay = s > 0 ? s + (s == 1 ? " 秒" : " 秒") : "";
 
     return hDisplay + mDisplay + sDisplay;
 }
@@ -4294,55 +4294,55 @@ function numberCruncher(number, decimals){
     var precision = decimals;
     if (number>999999999999999999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000000000000000000;
-        suffix = "sexdecillion";
+        suffix = "阿僧祇";
     } else if (number>999999999999999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000000000000000;
-        suffix = "quindecillion";
+        suffix = "恒河沙";
     } else if (number>999999999999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000000000000;
-        suffix = "quattuordecillion";
+        suffix = "极";
     } else if (number>999999999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000000000;
-        suffix = "tredecillion";
+        suffix = "载";
     } else if (number>999999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000000;
-        suffix = "duodecillion";
+        suffix = "正";
     } else if (number>999999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000000;
-        suffix = "undecillion";
+        suffix = "涧";
     } else if (number>999999999999999999999999999999999){
         number = number/1000000000000000000000000000000000;
-        suffix = "decillion";
+        suffix = "沟";
     } else if (number>999999999999999999999999999999){
         number = number/1000000000000000000000000000000;
-        suffix = "nonillion";
+        suffix = "穰";
     } else if (number>999999999999999999999999999){
         number = number/1000000000000000000000000000;
-        suffix = "octillion";
+        suffix = "千秭";
     } else if (number>999999999999999999999999){
         number = number/1000000000000000000000000;
-        suffix = "septillion";
+        suffix = "秭";
     } else if (number>999999999999999999999){
         number = number/1000000000000000000000;
-        suffix = "sextillion";
+        suffix = "十垓";
     } else if (number>999999999999999999){
         number = number/1000000000000000000;
-        suffix = "quintillion";
+        suffix = "百京";
     } else if (number>999999999999999){
         number = number/1000000000000000;
-        suffix = "quadrillion";
+        suffix = "千万亿";
     } else if (number>999999999999){
         number = number/1000000000000;
-        suffix = "trillion";
+        suffix = "万亿";
     } else if (number>999999999){
         number = number/1000000000;
-        suffix = "billion";
+        suffix = "十亿";
     } else if (number>999999){
         number = number/1000000;
-        suffix = "million";
+        suffix = "百万";
     } else if (number>999){
         number = number/1000;
-        suffix = "thousand";
+        suffix = "千";
     }  else if (number<1000){
         precision = 0;
     }
@@ -4350,10 +4350,10 @@ function numberCruncher(number, decimals){
 }
 
 
-var oneToTen = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"],
-    elevenToNineteen = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'],
-    multipleOfTen = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'],
-    placeValue = ["", " thousand ", " million ", " billion ", " trillion ", " quadrillion ", " quintillion ", " sextillion ", " septillion ", " octillion ", " nonillion ", " decillion ", " undecillion ", " duodecillion ", " tredecillion ", " quattuordecillion ", " quindecillion ", " sexdecillion ", " septendecillion ", " octodecillion ", " novemdecillion  ", " vigintillion ", " unvigintillion ", " duovigintillion ", " trevigintillion ", " quattuorvigintillion ", " quinvigintillion ", " sexvigintillion ", " septenvigintillion ", " octovigintillion ", " novemvigintillion ", " trigintillion ", " untrigintillion ", " duotrigintillion ", " tretrigintillion ", " quattuortrigintillion ", " quintrigintillion ", " sextrigintillion ", " septentrigintillion ", " octotrigintillion ", " novemtrigintillion ", " quadragintillion ", " unquadragintillion ", " duoquadragintillion ", " trequadragintillion ", " quattuorquadragintillion ", " quinquadragintillion ", " sexquadragintillion ", " septenquadragintillion ", " octoquadragintillion ", " novemquadragintillion ", " quinquagintillion ", " unquinquagintillion ", " duoquinquagintillion ", " trequinquagintillion ", " quattuorquinquagintillion ", " quinquinquagintillion ", " sexquinquagintillion ", " septenquinquagintillion ", " octoquinquagintillion ", " novemquinquagintillion ", " sexagintillion ", " unsexagintillion ", " duosexagintillion ", " tresexagintillion ", " quattuorsexagintillion ", " quinsexagintillion ", " sexsexagintillion ", " septsexagintillion ", " octosexagintillion ", " octosexagintillion ", " septuagintillion ", " unseptuagintillion ", " duoseptuagintillion ", " treseptuagintillion ", " quinseptuagintillion"," sexseptuagintillion"," septseptuagintillion"," octoseptuagintillion"," novemseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"," treoctogintillion"," quattuoroctogintillion"," quinoctogintillion"," sexoctogintillion"," septoctogintillion"," octooctogintillion"," novemoctogintillion"," nonagintillion"," unnonagintillion"," duononagintillion", " trenonagintillion "," quattuornonagintillion "," quinnonagintillion "," sexnonagintillion "," septnonagintillion "," octononagintillion "," novemnonagintillion ", " centillion"];
+var oneToTen = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"],
+    elevenToNineteen = ['十', '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九'],
+    multipleOfTen = ['', '', '二十', '三十', '四十', '五十', '六十', '七十', '八十', '九十'],
+    placeValue = ["", " 千 ", " 百万 ", " 十亿 ", " 万亿 ", " 千万亿 ", " 百京 ", " 十垓 ", " 秭 ", " 千秭 ", " 穰 ", " 沟 ", " 涧 ", " 正 ", " 载 ", " 极 ", " 恒河沙 ", " 阿僧祇 ", " 那由他 ", " octodecillion ", " novemdecillion  ", " vigintillion ", " unvigintillion ", " duovigintillion ", " trevigintillion ", " quattuorvigintillion ", " quinvigintillion ", " sexvigintillion ", " septenvigintillion ", " octovigintillion ", " novemvigintillion ", " trigintillion ", " untrigintillion ", " duotrigintillion ", " tretrigintillion ", " quattuortrigintillion ", " quintrigintillion ", " sextrigintillion ", " septentrigintillion ", " octotrigintillion ", " novemtrigintillion ", " quadragintillion ", " unquadragintillion ", " duoquadragintillion ", " trequadragintillion ", " quattuorquadragintillion ", " quinquadragintillion ", " sexquadragintillion ", " septenquadragintillion ", " octoquadragintillion ", " novemquadragintillion ", " quinquagintillion ", " unquinquagintillion ", " duoquinquagintillion ", " trequinquagintillion ", " quattuorquinquagintillion ", " quinquinquagintillion ", " sexquinquagintillion ", " septenquinquagintillion ", " octoquinquagintillion ", " novemquinquagintillion ", " sexagintillion ", " unsexagintillion ", " duosexagintillion ", " tresexagintillion ", " quattuorsexagintillion ", " quinsexagintillion ", " sexsexagintillion ", " septsexagintillion ", " octosexagintillion ", " octosexagintillion ", " septuagintillion ", " unseptuagintillion ", " duoseptuagintillion ", " treseptuagintillion ", " quinseptuagintillion"," sexseptuagintillion"," septseptuagintillion"," octoseptuagintillion"," novemseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"," treoctogintillion"," quattuoroctogintillion"," quinoctogintillion"," sexoctogintillion"," septoctogintillion"," octooctogintillion"," novemoctogintillion"," nonagintillion"," unnonagintillion"," duononagintillion", " trenonagintillion "," quattuornonagintillion "," quinnonagintillion "," sexnonagintillion "," septnonagintillion "," octononagintillion "," novemnonagintillion ", " centillion"];
 
 function spellf(userInput) {
     var numToWorkOn;
@@ -4370,7 +4370,7 @@ function spellf(userInput) {
 
     if (userInput < 0)
     {
-        console.log("Error, value less than 0");
+        console.log("错误，数值小于0");
         return userInput.toString() ;
     }
 
@@ -4385,7 +4385,7 @@ function spellf(userInput) {
     }
 
      else {
-        throw new Error("Invalid Input");
+        throw new Error("无效输入");
         return;
     }
 
@@ -4417,7 +4417,7 @@ function spellf(userInput) {
 
     //Put limit check on the program, placevalue map should be increased to increase capacity
     if (numToWorkOn.length >= 303) {
-        throw new Error("Number out of bonds!");
+        throw new Error("数字超出范围！");
         return;
     } else {
         return convertToString(numToWorkOn);
@@ -4467,9 +4467,9 @@ function spellf(userInput) {
         var hundredPlace = parseInt(val / 100),
             result;
         if (val % 100 == 0) {
-            result = oneToTen[hundredPlace] + " hundred ";
+            result = oneToTen[hundredPlace] + " 百 ";
         } else {
-            result = oneToTen[hundredPlace] + " hundred " + numLessThan99(val % 100);
+            result = oneToTen[hundredPlace] + " 百 " + numLessThan99(val % 100);
         }
         return result;
     }
@@ -4538,7 +4538,7 @@ function increaseProbeTrust(){
     probeTrustCost = Math.floor(Math.pow(probeTrust+1, 1.47)*500);
     probeTrustDisplayElement.innerHTML = probeTrust;
     probeTrustCostDisplayElement.innerHTML = formatWithCommas(Math.floor(probeTrustCost));
-    displayMessage("WARNING: Risk of value drift increased");
+    displayMessage("警告：价值漂移风险增加");
     }
 }
 
@@ -4550,7 +4550,7 @@ function increaseMaxTrust(){
     // maxTrustCost = Math.floor(Math.pow(maxTrust, 1.17)*1000);
     maxTrustDisplayElement.innerHTML = formatWithCommas(maxTrust);
     // document.getElementById('maxTrustCostDisplay').innerHTML = Math.floor(maxTrustCost).toLocaleString();
-    displayMessage("Maximum trust increased, probe design space expanded");
+    displayMessage("最大信任增加，探测器设计空间扩展");
     }
 }
 

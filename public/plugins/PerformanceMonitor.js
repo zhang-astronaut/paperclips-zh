@@ -16,7 +16,7 @@ Paperclips.PluginManager.register({
   panels: {
     performanceMonitorPanel: {
       column: ViewManager.Columns.EXTRA,
-      name: 'DEBUG - Game Performance',
+      name: '调试 - 游戏性能',
       renderer: panel => ({
         '#perfCpuDisplay': calculateCPUHealth(),
         '#perfSlowSpeed': Paperclips.game.slow.getSpeed(),
@@ -28,16 +28,16 @@ Paperclips.PluginManager.register({
         '#perfCustomDuration': formatWithCommas(getCustomDuration(), 2)
       }),
       template: `
-        <h4>System</h4>
+        <h4>系统</h4>
         <p>CPU: <span id="perfCpuDisplay">0</span>%<p>
 
         <br />
 
-        <h4>Game Loops</h4>
-        <p>Slow Loop (<span id="perfSlowSpeed">100</span>ms): <span id="perfSlowDuration"></span>ms</p>
-        <p>Fast Loop (<span id="perfFastSpeed">10</span>ms): <span id="perfFastDuration"></span>ms</p>
-        <p>Render Loop: <span id="perfRenderDuration"></span>ms</p>
-        <p>Custom Loops (<span id="perfCustomSpeed"></span>ms): <span id="perfCustomDuration"></span>ms</p>
+        <h4>游戏循环</h4>
+        <p>慢循环 (<span id="perfSlowSpeed">100</span>ms): <span id="perfSlowDuration"></span>ms</p>
+        <p>快循环 (<span id="perfFastSpeed">10</span>ms): <span id="perfFastDuration"></span>ms</p>
+        <p>渲染循环: <span id="perfRenderDuration"></span>ms</p>
+        <p>自定义循环 (<span id="perfCustomSpeed"></span>ms): <span id="perfCustomDuration"></span>ms</p>
       `
     }
   }

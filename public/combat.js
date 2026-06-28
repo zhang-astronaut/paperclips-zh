@@ -45,7 +45,7 @@ var battleEndTimer = 100;
 var masterBattleClock = 0;
 
 var honorCount = 0;
-var threnodyTitle = "Durenstein 1";
+var threnodyTitle = "迪伦斯坦 1";
 var bonusHonor = 0;
 var honorReward = 0;
 
@@ -62,7 +62,7 @@ function checkForBattles(){
     }
 }
 
-var battleNames = ["Aboukir", "Abensberg", "Acre", "Alba de Tormes", "la Albuera", "Algeciras Bay", "Amstetten", "Arcis-sur-Aube", "Aspern-Essling", "Jena-Auerstedt", "Arcole", "Austerlitz", "Badajoz", "Bailen", "la Barrosa", "Bassano", "Bautzen", "Berezina", "Bergisel", "Borodino", "Burgos", "Bucaco", "Cadiz", "Caldiero", "Castiglione", "Castlebar", "Champaubert", "Chateau-Thierry", "Copenhagen", "Corunna", "Craonne", "Dego", "Dennewitz", "Dresden", "Durenstein", "Eckmuhl", "Elchingen", "Espinosa de los Monteros", "Eylau", "Cape Finisterre", "Friedland", "Fuentes de Onoro", "Gevora River", "Gerona", "Hamburg", "Haslach-Jungingen", "Heilsberg", "Hohenlinden", "Jena-Auerstedt", "Kaihona", "Kolberg", "Landshut", "Leipzig", "Ligny", "Lodi", "Lubeck", "Lutzen", "Marengo", "Maria", "Medellin", "Medina de Rioseco", "Millesimo", "Mincio River", "Mondovi", "Montebello", "Montenotte", "Montmirail", "Mount Tabor", "The Nile", "Novi", "Ocana", "Cape Ortegal", "Orthez", "Pancorbo", "Piave River", "The Pyramids", "Quatre Bras", "Raab", "Raszyn", "Rivoli", "Rolica", "La Rothiere", "Rovereto", "Saalfeld", "Schongrabern", "Salamanca", "Smolensk", "Somosierra", "Talavera", "Tamames", "Trafalgar", "Trebbia", "Tudela", "Ulm", "Valls", "Valmaseda", "Valutino", "Vauchamps", "Vimeiro", "Vitoria", "Wagram", "Waterloo", "Wavre", "Wertingen", "Zaragoza"];
+var battleNames = ["阿布基尔", "阿本斯贝格", "阿卡", "阿尔瓦德托尔梅斯", "拉阿尔武埃拉", "阿尔赫西拉斯湾", "阿姆施泰滕", "奥布河畔阿尔西", "阿斯珀恩-埃斯灵", "耶拿-奥尔施泰特", "阿尔科莱", "奥斯特里茨", "巴达霍斯", "拜伦", "拉巴罗萨", "巴萨诺", "包岑", "别列津纳", "贝吉塞尔", "博罗季诺", "布尔戈斯", "布萨科", "加的斯", "卡尔迪耶罗", "卡斯蒂廖内", "卡斯尔巴", "尚波贝尔", "沙托蒂耶里", "哥本哈根", "科鲁尼亚", "克朗讷", "德戈", "登讷维茨", "德累斯顿", "迪伦斯坦", "埃克米尔", "埃尔兴根", "埃斯皮诺萨德洛斯蒙特罗斯", "埃劳", "菲尼斯特雷角", "弗里德兰", "丰特斯德奥尼奥罗", "赫沃拉河", "赫罗纳", "汉堡", "哈斯拉赫-容根", "海尔斯贝格", "霍恩林登", "耶拿-奥尔施泰特", "凯霍纳", "科尔贝格", "兰茨胡特", "莱比锡", "利尼", "洛迪", "吕贝克", "吕岑", "马伦戈", "玛丽亚", "梅德林", "梅迪纳德里奥塞科", "米勒西莫", "明乔河", "蒙多维", "蒙特贝洛", "蒙特诺特", "蒙米拉伊", "塔博尔山", "尼罗河", "诺维", "奥卡尼亚", "奥尔特加尔角", "奥尔泰兹", "潘科尔沃", "皮亚韦河", "金字塔", "四臂村", "拉布", "拉申", "里沃利", "罗利萨", "拉罗蒂埃", "罗韦雷托", "萨尔费尔德", "雄格拉本", "萨拉曼卡", "斯摩棱斯克", "索莫谢拉", "塔拉韦拉", "塔马梅斯", "特拉法加", "特雷比亚", "图德拉", "乌尔姆", "瓦尔斯", "巴尔马塞达", "瓦卢蒂诺", "沃尚", "维梅鲁", "维多利亚", "瓦格拉姆", "滑铁卢", "瓦夫尔", "韦尔廷根", "萨拉戈萨"];
 
 var battleNumbers = [];
 
@@ -92,7 +92,7 @@ function battleWrite(newBattle){
     battleNameP.setAttribute("class", "clean");
     
     if (battleNameFlag == 0){
-        battleName = document.createTextNode("Battle "+newBattle.id);
+        battleName = document.createTextNode("战斗 "+newBattle.id);
 
         }
     
@@ -110,7 +110,7 @@ function battleWrite(newBattle){
     var clipsLabelSpan = document.createElement("span");
     clipsLabelSpan.style.fontWeight = "bold";
     
-    var clipsLabel = document.createTextNode("Clips: ");
+    var clipsLabel = document.createTextNode("回形针：");
     clipsLabelSpan.appendChild(clipsLabel);
     
     battleDetailsP.appendChild(clipsLabelSpan);
@@ -124,7 +124,7 @@ function battleWrite(newBattle){
     var driftersLabelSpan = document.createElement("span");
     driftersLabelSpan.style.fontWeight = "bold";
     
-    var driftersLabel = document.createTextNode(" Drifters: ");
+    var driftersLabel = document.createTextNode(" 漂移者：");
     driftersLabelSpan.appendChild(driftersLabel);
     
     battleDetailsP.appendChild(driftersLabelSpan);
@@ -140,7 +140,7 @@ function battleWrite(newBattle){
     var territoryP = document.createElement("p");
     territoryP.setAttribute("class", "clean");
     var t = (newBattle.territory/availableMatter);
-    var territoryDisplay = document.createTextNode("Territory at stake: "+Math.ceil(t*100)+"% of available matter");
+    var territoryDisplay = document.createTextNode("风险领土："+Math.ceil(t*100)+"% 的可用物质");
     territoryP.appendChild(territoryDisplay);
     
     newBattleReport.appendChild(territoryP);
@@ -254,7 +254,7 @@ function updateBattleDisplay(battle){
     span.style.fontWeight = "bold";
     newBattle.appendChild(span);
     
-    var hed = document.createTextNode("Combatants");
+    var hed = document.createTextNode("战斗人员");
     span.appendChild(hed);    
     
     var clipsCount = document.createElement("span");
@@ -314,7 +314,7 @@ function checkForBattleEnd(){
             honor = honor - battleLEFTSHIPS;
             honorCount =  1;   
             }    
-            document.getElementById("battleResult").innerHTML = "DEFEAT";
+            document.getElementById("battleResult").innerHTML = "失败";
             document.getElementById("battleResultSign").innerHTML = "-";
             document.getElementById("honorAmount").innerHTML = battleLEFTSHIPS; 
             document.getElementById("honorDisplay").innerHTML = Math.round(honor).toLocaleString();
@@ -334,7 +334,7 @@ function checkForBattleEnd(){
             honorCount =  1;  
             } 
               
-            document.getElementById("battleResult").innerHTML = "VICTORY";
+            document.getElementById("battleResult").innerHTML = "胜利";
             document.getElementById("battleResultSign").innerHTML = "+";
             document.getElementById("honorDisplay").innerHTML = Math.round(honor).toLocaleString();  
               
@@ -782,7 +782,7 @@ function createBattle(){
         
     Battle();
     
-    battleName = ("Drifter Attack "+newBattle.id);
+    battleName = ("漂移者攻击 "+newBattle.id);
     
         if (battleNameFlag == 1){
         battleName = generateBattleName();

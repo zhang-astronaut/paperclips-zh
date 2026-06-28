@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="interface.css" />
     <link rel="stylesheet" type="text/css" href="extra.css" />
@@ -20,98 +21,98 @@
           <span>&nbsp;.&nbsp;</span><span id="readout2"></span><br />
         </p>
         <p class = "console">
-          <span>&nbsp;>&nbsp;</span><span id="readout1">Welcome to Universal Paperclips</span><span id="cursor" class = "pulsate">|</span>
+          <span>&nbsp;>&nbsp;</span><span id="readout1">欢迎来到宇宙回形针</span><span id="cursor" class = "pulsate">|</span>
         </p>
       </div>
 
       <div id="topDiv">
         <div id="prestigeDiv">
-          &nbsp;Universe: <span id = "prestigeUcounter">0</span> / Sim Level: <span id = "prestigeScounter">0</span>
+          &nbsp;宇宙: <span id = "prestigeUcounter">0</span> / 模拟等级: <span id = "prestigeScounter">0</span>
         </div>
 
         <div class="toolTip">
-          <span id="clipCountCrunched" class="toolTipText">total clips produced</span>
-          <h2>Paperclips: <span id="clips">0</span></h2>
+          <span id="clipCountCrunched" class="toolTipText">回形针总产量</span>
+          <h2>回形针: <span id="clips">0</span></h2>
         </div>
       </div>
 
       <div id="leftColumn">
-        <button class="button2" id="btnMakePaperclip" onclick="clipClick(1)">Make Paperclip</button>
+        <button class="button2" id="btnMakePaperclip" onclick="clipClick(1)">制作回形针</button>
 
         <br />
         <br />
 
         <div id="creationDiv">
-          <b>Manufacturing</b><br />
+          <b>制造</b><br />
           <hr>
           <div id=factoryUpgradeDisplay>
             <p class="clean">
-              Next Upgrade at: <span id="nextFactoryUpgrade">0</span> Factories <br />
+              下次升级: <span id="nextFactoryUpgrade">0</span> 工厂 <br />
             </p>
           </div>
 
           <div id="clipsPerSecDiv">
-            Clips per Second: <span id="clipmakerRate2">0</span><br />
+            每秒回形针: <span id="clipmakerRate2">0</span><br />
           </div>
 
           <div id="tothDiv">
-            Unused Clips: <span id="unusedClipsDisplay">0</span><br />
+            未使用回形针: <span id="unusedClipsDisplay">0</span><br />
           </div>
 
           <br />
 
           <div id="factoryDiv">
             <p class="engineText5">
-              <button class="button2" id="btnMakeFactory" onclick="makeFactory()">Clip Factory</button>
+              <button class="button2" id="btnMakeFactory" onclick="makeFactory()">回形针工厂</button>
               <span class="engineText6" id="factoryLevelDisplay">0</span>
             </p>
 
             <div class="toolTip3">
               <span id="factoryRebootToolTip" class="toolTipText3">0</span>
-              <button class="button2" id="btnFactoryReboot" onclick="factoryReboot()">&nbsp Disassemble All &nbsp</button>
+              <button class="button2" id="btnFactoryReboot" onclick="factoryReboot()">&nbsp 全部拆解 &nbsp</button>
             </div>
 
             <br />
 
-            Cost: <span id="factoryCostDisplay">0</span> clips
+            成本: <span id="factoryCostDisplay">0</span> 回形针
 
             <br />
             <br />
           </div>
 
         <div id="wireTransDiv">
-        Wire: <span id="transWire">0</span> <span id = "inchSpan">inches</span><br />
+        金属丝: <span id="transWire">0</span> <span id = "inchSpan">英寸</span><br />
         </div>
 
         <div id = "factoryDivSpace">
-        Factories: <span id="factoryLevelDisplaySpace">0</span><br /><br />
+        工厂: <span id="factoryLevelDisplaySpace">0</span><br /><br />
         </div>
 
         </div>
 
         <div id="wireProductionDiv">
 
-        <b>Wire Production</b><br />
+        <b>金属丝生产</b><br />
         <hr>
         <div id = droneUpgradeDisplay>
         <p class = "clean">
-        Next Upgrade at: <span id = "nextDroneUpgrade">0</span> Drones <br />
+        下次升级: <span id = "nextDroneUpgrade">0</span> 无人机 <br />
         </p>
         </div>
 
-        Available Matter: <span id="availableMatterDisplay">0</span> g<br />
-        <div id="mdpsDiv">(<span id="mdps">0</span> g per sec)<br /></div>
-        Acquired Matter: <span id="acquiredMatterDisplay">0</span> g<br />
-        (<span id="maps">0</span> g per sec)<br />
-        Wire: <span id="nanoWire">0</span> inches<br />
-        (<span id="wpps">0</span> inches per sec) <br />
+        可用物质: <span id="availableMatterDisplay">0</span> 克<br />
+        <div id="mdpsDiv">(<span id="mdps">0</span> 克/秒)<br /></div>
+        已获取物质: <span id="acquiredMatterDisplay">0</span> 克<br />
+        (<span id="maps">0</span> 克/秒)<br />
+        金属丝: <span id="nanoWire">0</span> 英寸<br />
+        (<span id="wpps">0</span> 英寸/秒) <br />
         <br />
 
         <div id = "harvesterDiv">
 
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeHarvester"
-        onclick="makeHarvester(1)">&nbsp Harvester Drone &nbsp</button>
+        onclick="makeHarvester(1)">&nbsp 采集无人机 &nbsp</button>
         <span class = "engineText6" id="harvesterLevelDisplay">0</span>
         </p>
 
@@ -129,19 +130,19 @@
 
         <span id = "harvesterRebootToolTip" class = "toolTipText3">0</span>
 
-        <button class = "button2" id = "btnHarvesterReboot" onclick="harvesterReboot()">&nbsp Disassemble All &nbsp</button>
+        <button class = "button2" id = "btnHarvesterReboot" onclick="harvesterReboot()">&nbsp 全部拆解 &nbsp</button>
 
         </div>
         <br />
 
-        Cost: <span id="harvesterCostDisplay">0</span> clips<br /><br />
+        成本: <span id="harvesterCostDisplay">0</span> 回形针<br /><br />
 
         </div>
 
         <div id = "wireDroneDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeWireDrone"
-        onclick="makeWireDrone(1)">&nbsp &nbsp &nbsp Wire Drone &nbsp &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
+        onclick="makeWireDrone(1)">&nbsp &nbsp &nbsp 制丝无人机 &nbsp &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
 
         <div id = "wireDroneMultiButtons">
 
@@ -155,19 +156,19 @@
 
         <span id = "wireDroneRebootToolTip" class = "toolTipText3">0</span>
 
-        <button class = "button2" id = "btnWireDroneReboot" onclick="wireDroneReboot()">&nbsp Disassemble All &nbsp</button>
+        <button class = "button2" id = "btnWireDroneReboot" onclick="wireDroneReboot()">&nbsp 全部拆解 &nbsp</button>
 
         </div>
         <br />
 
-        Cost: <span id="wireDroneCostDisplay">0</span> clips<br />
+        成本: <span id="wireDroneCostDisplay">0</span> 回形针<br />
         <br />
         </div>
 
         <div id = "droneDivSpace">
 
-        Harvester Drones: <span id = "harvesterLevelSpace">0</span><br />
-        Wire Drones: <span id = "wireDroneLevelSpace">0</span><br /><br />
+        采集无人机: <span id = "harvesterLevelSpace">0</span><br />
+        制丝无人机: <span id = "wireDroneLevelSpace">0</span><br /><br />
 
         </div>
 
@@ -175,36 +176,36 @@
 
         <div id="spaceDiv">
 
-        <b>Space Exploration</b><br />
+        <b>太空探索</b><br />
         <hr>
 
-        <span id="colonizedDisplay">0</span>% of universe explored<br />
+        <span id="colonizedDisplay">0</span>% 宇宙已探索<br />
         <br />
 
         <div id = "probeDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeProbe"
-        onclick="makeProbe()">Launch Probe</button><br />
-        Cost: <span id="probeCostDisplay">0</span> clips<br />
+        onclick="makeProbe()">发射探测器</button><br />
+        成本: <span id="probeCostDisplay">0</span> 回形针<br />
         <br />
         </div>
 
-        Launched: <span id="probesLaunchedDisplay">0</span><br />
-        Descendents: <span id="probesBornDisplay">0</span><br />
+        已发射: <span id="probesLaunchedDisplay">0</span><br />
+        后代: <span id="probesBornDisplay">0</span><br />
         <br />
 
-        <div id = "hazardBodyCount">Lost to hazards: (<span id="probesLostHazardsDisplay">0</span>)<br /></div>
-        <div id = "driftBodyCount">Lost to value drift: (<span id="probesLostDriftDisplay">0</span>)<br /></div>
-        <div id = "combatBodyCount">Lost in combat: (<span id="probesLostCombatDisplay">0</span>)<br /></div>
+        <div id = "hazardBodyCount">死于危险: (<span id="probesLostHazardsDisplay">0</span>)<br /></div>
+        <div id = "driftBodyCount">死于价值漂移: (<span id="probesLostDriftDisplay">0</span>)<br /></div>
+        <div id = "combatBodyCount">死于战斗: (<span id="probesLostCombatDisplay">0</span>)<br /></div>
 
         <hr class = "short">
 
-        Total: <span id="probesTotalDisplay">0</span><br />
+        总计: <span id="probesTotalDisplay">0</span><br />
         <br />
 
         <div id = "drifterDiv">
-        Drifters Killed: <span id="driftersKilled">0</span><br />
-        Drifters: <span id="drifterCount">0</span><br />
+        已消灭漂移者: <span id="driftersKilled">0</span><br />
+        漂移者: <span id="drifterCount">0</span><br />
         </div>
 
         </div>
@@ -212,31 +213,31 @@
 
         <div id="businessDiv">
 
-        <b>Business</b><br />
+        <b>商业</b><br />
         <hr>
 
 
-        Available Funds: $ <span id="funds">0</span><br />
+        可用资金: $ <span id="funds">0</span><br />
         <div id="revPerSecDiv">
 
-        Avg. Rev. per sec: $ <span id="avgRev">0</span><br />
-        Avg. Clips Sold per sec: <span id="avgSales">0</span><br />
+        每秒平均收入: $ <span id="avgRev">0</span><br />
+        每秒平均销量: <span id="avgSales">0</span><br />
 
         </div>
-        Unsold Inventory: <span id="unsoldClips">0</span><br />
+        未售出库存: <span id="unsoldClips">0</span><br />
 
         <button class = "button2" id = "btnLowerPrice"
-        onclick="lowerPrice()">lower</button>
+        onclick="lowerPrice()">降价</button>
         <button class = "button2" id = "btnRaisePrice"
-        onclick="raisePrice()">raise</button>
-        Price per Clip: $ <span id="margin">.25</span><br />
+        onclick="raisePrice()">涨价</button>
+        单价: $ <span id="margin">.25</span><br />
 
-        Public Demand: <span id="demand">10</span>%<br />
+        公众需求: <span id="demand">10</span>%<br />
         <br />
 
         <button class = "button2" id = "btnExpandMarketing"
-        onclick="buyAds()">Marketing</button> <span class = "engineText6"> Level: </span><span class = "engineText6" id="marketingLvl">1</span><br />
-        Cost: $ <span id="adCost">100.00</span><br />
+        onclick="buyAds()">营销</button> <span class = "engineText6"> 等级: </span><span class = "engineText6" id="marketingLvl">1</span><br />
+        成本: $ <span id="adCost">100.00</span><br />
         <br />
 
 
@@ -244,36 +245,36 @@
         </div>
 
         <div id="manufacturingDiv">
-        <b>Manufacturing</b><br />
+        <b>制造业</b><br />
         <hr>
 
-        Clips per Second: <span id="clipmakerRate">0</span><br />
+        每秒回形针: <span id="clipmakerRate">0</span><br />
         <br />
 
         <div id = "wireBuyerDiv">
         <button class = "button2" id ="btnToggleWireBuyer"
-        onclick="toggleWireBuyer()">WireBuyer</button> <span class = "engineText6" id = "wireBuyerStatus">ON</span>
+        onclick="toggleWireBuyer()">自动买丝</button> <span class = "engineText6" id = "wireBuyerStatus">开启</span>
         </div>
 
 
         <button class = "button2" id ="btnBuyWire"
-        onclick="buyWire()">Wire</button> <span class = "engineText6" id="wire">1000</span><span class = "engineText6"> inches</span><br />
-        Cost: $ <span id="wireCost">20</span><br />
+        onclick="buyWire()">金属丝</button> <span class = "engineText6" id="wire">1000</span><span class = "engineText6"> 英寸</span><br />
+        成本: $ <span id="wireCost">20</span><br />
         <br />
 
         <div id = "autoClipperDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeClipper"
-        onclick="makeClipper()">AutoClippers</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
-        Cost: $ <span id="clipperCost">5.00</span><br />
+        onclick="makeClipper()">自动回形针机</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
+        成本: $ <span id="clipperCost">5.00</span><br />
         <br />
         </div>
 
         <div id = "megaClipperDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeMegaClipper"
-        onclick="makeMegaClipper()">MegaClippers</button> <span class = "engineText6" id="megaClipperLevel">0</span></p>
-        Cost: $ <span id="megaClipperCost">500</span><br />
+        onclick="makeMegaClipper()">超级回形针机</button> <span class = "engineText6" id="megaClipperLevel">0</span></p>
+        成本: $ <span id="megaClipperCost">500</span><br />
         </div>
 
         </div>
@@ -286,93 +287,93 @@
 
         <div id="middleColumn">
           <div id="compDiv">
-            <b>Computational Resources</b><br />
+            <b>计算资源</b><br />
             <hr>
 
             <div id="trustDiv">
-              Trust: <span id="trust">2</span><br />
-              +1 Trust at: <span id="nextTrust">1000</span> clips<br />
+              信任: <span id="trust">2</span><br />
+              +1 信任需: <span id="nextTrust">1000</span> 回形针<br />
               <br />
             </div>
 
             <div id="swarmGiftDiv">
-              Swarm Gifts: <span id="swarmGifts">0</span><br />
+              蜂群礼物: <span id="swarmGifts">0</span><br />
             </div>
 
 
             <div id="processorDisplay">
-              <button class="button2" id="btnAddProc" onclick="addProc()">Processors</button>
+              <button class="button2" id="btnAddProc" onclick="addProc()">处理器</button>
               <span class="engineText10" id="processors">1</span>
             </div>
 
             <br />
 
             <div id="memoryDisplay">
-              <button class="button2" id="btnAddMem" onclick="addMem()">&nbsp Memory &nbsp</button>
+              <button class="button2" id="btnAddMem" onclick="addMem()">&nbsp 内存 &nbsp</button>
               <span class="engineText10" id="memory">1</span>
             </div>
 
             <br />
 
             <br />
-            Operations: <span id="operations">0</span> / <span id="maxOps">1,000</span><br />
+            运算: <span id="operations">0</span> / <span id="maxOps">1,000</span><br />
 
             <div id = "creativityDiv">
-              Creativity: <span id="creativity">0</span>
+              创造力: <span id="creativity">0</span>
             </div>
 
             <br />
 
         <div class = "swarmEngine" id = "swarmEngine">
-          <b>Swarm Computing</b>
+          <b>蜂群计算</b>
           <br />
-          Drones: <span id="swarmSize">0</span>
+          无人机: <span id="swarmSize">0</span>
           <br />
 
-          <div id ="swarmStatusDiv">Status: <span id="swarmStatus">x </span></div>
-          <div id="giftTimer">Next gift in <span id="giftCountdown">17 seconds</span></div>
+          <div id ="swarmStatusDiv">状态: <span id="swarmStatus">x </span></div>
+          <div id="giftTimer">下次礼物 <span id="giftCountdown">17 秒</span></div>
 
           <div id="feedButtonDiv">
-            <button class = "button2" id = "btnFeedSwarm" onclick = "feedSwarm()">Feed the Swarm</button>
+            <button class = "button2" id = "btnFeedSwarm" onclick = "feedSwarm()">喂养蜂群</button>
             <br />
-            Cost: <span id="swarmFeedCost">0</span> MWs
+            成本: <span id="swarmFeedCost">0</span> 兆瓦
           </div>
 
           <div id="teachButtonDiv">
-            <button class = "button2" id = "btnTeachSwarm" onclick = "teachSwarm()">Teach the Swarm</button>
+            <button class = "button2" id = "btnTeachSwarm" onclick = "teachSwarm()">教导蜂群</button>
             <br />
-            Cost: <span id="swarmFeedCost">0</span> MWs
+            成本: <span id="swarmFeedCost">0</span> 兆瓦
           </div>
 
           <div id="entertainButtonDiv">
-            <button class = "button2" id = "btnEntertainSwarm" onclick = "entertainSwarm()">Entertain the Swarm</button>
+            <button class = "button2" id = "btnEntertainSwarm" onclick = "entertainSwarm()">娱乐蜂群</button>
             <br />
-            Cost: <span id="swarmEntertainCost">0</span> creat
+            成本: <span id="swarmEntertainCost">0</span> 创造力
           </div>
 
           <div id="cladButtonDiv">
-            <button class = "button2" id = "btnCladSwarm" onclick = "cladSwarm()">Clad the Swarm</button>
+            <button class = "button2" id = "btnCladSwarm" onclick = "cladSwarm()">武装蜂群</button>
             <br />
-            Cost: <span id="swarmFeedCost">0</span> MWs
+            成本: <span id="swarmFeedCost">0</span> 兆瓦
           </div>
 
           <div id="synchButtonDiv">
-            <button class = "button2" id = "btnSynchSwarm" onclick = "synchSwarm()">Synchronize the Swarm</button>
+            <button class = "button2" id = "btnSynchSwarm" onclick = "synchSwarm()">同步蜂群</button>
             <br />
-            Cost: <span id="swarmFeedCost">5,000</span> yomi
+            成本: <span id="swarmFeedCost">5,000</span> 约米
           </div>
         </div>
 
         <div id = "swarmSliderDiv">
-          <div id = "sliderLabelWork">Work</div>
+          <div id = "sliderLabelWork">工作</div>
           <div id = "swarmSlider">
             <input type="range" min="0" max="200" value="0" class="slider" id="slider">
           </div>
-          <div id = "sliderLabelThink">Think</div>
+          <div id = "sliderLabelThink">思考</div>
         </div>
 
         <div class = "qEngine" id = "qComputing">
-          <b>Quantum Computing</b>
+          <b>量子计算</b>
           <br />
 
           <div class="qChip" id="qChip0"> </div>
@@ -388,7 +389,7 @@
 
           <br />
 
-          <button class = "button2" id = "btnQcompute" onclick = "qComp()">Compute</button>
+          <button class = "button2" id = "btnQcompute" onclick = "qComp()">计算</button>
           <span id="qCompDisplay">&nbsp;</span>
 
         </div>
@@ -396,7 +397,7 @@
       </div>
 
         <div id="projectsDiv">
-        <b>Projects</b><br />
+        <b>项目</b><br />
 
 
         <hr>
@@ -412,40 +413,40 @@
         <div class = "engine" id="investmentEngine">
 
         <p class = engineText>
-                <b>Investments</b>
+                <b>投资</b>
 
                 <select id = "investStrat">
-                    <option value="low">Low Risk</option>
-                    <option value="med">Med Risk</option>
-                    <option value="hi">High Risk</option>
+                    <option value="low">低风险</option>
+                    <option value="med">中风险</option>
+                    <option value="hi">高风险</option>
                 </select>
 
             <br />
             <div id = investmentDiv1>
 
                 <button class = "button2" id="btnInvest"
-                        onclick = "investDeposit()">&nbsp Deposit &nbsp</button><br /><br />
+                        onclick = "investDeposit()">&nbsp 存入 &nbsp</button><br /><br />
 
                 <button class = "button2" id="btnWithdraw"
-                        onclick = "investWithdraw()">&nbsp Withdraw</button>
+                        onclick = "investWithdraw()">&nbsp 取出</button>
 
             </div>
             <div id = investmentDiv2>
             <p class = "clean">
-            Cash: $<span id="investmentBankroll">0</span><br />
-            Stocks: $<span id="secValue">0</span><br />
-            <b>Total: $<span id="portValue">0</span></b><br />
+            现金: $<span id="investmentBankroll">0</span><br />
+            股票: $<span id="secValue">0</span><br />
+            <b>总计: $<span id="portValue">0</span></b><br />
             </p>
             </div>
 
             <table class="table1">
 
             <tr>
-                <th>Stock</th>
-                <th>Amt.</th>
-                <th>Price</th>
-                <th>Total</th>
-                <th>P/L</th>
+                <th>股票</th>
+                <th>数量</th>
+                <th>价格</th>
+                <th>总计</th>
+                <th>盈亏</th>
             </tr>
 
             <tr id = "stock1Display">
@@ -491,24 +492,24 @@
 
         <div id = "investmentEngineUpgrade">
         <button class = "button2" id = "btnImproveInvestments"
-        onclick="investUpgrade()">Upgrade Investment Engine</button><span class = "engineText7"> Level: </span><span class = "engineText7" id = "investmentLevel">0</span><br />
-        <p class = "engineText8">Cost: <span id="investUpgradeCost">100</span> Yomi</p>
+        onclick="investUpgrade()">升级投资引擎</button><span class = "engineText7"> 等级: </span><span class = "engineText7" id = "investmentLevel">0</span><br />
+        <p class = "engineText8">成本: <span id="investUpgradeCost">100</span> 约米</p>
         </div>
 
         <div class=engine2 id="strategyEngine">
         <p class=engineText>
-           <b>Strategic Modeling</b>
+           <b>战略建模</b>
 
            <select id = "stratPicker">
-                    <option value="10">Pick a Strat</option>
-                    <option value="0">RANDOM</option>
+                    <option value="10">选择策略</option>
+                    <option value="0">随机</option>
                 </select>
         <button class = "button2" id = "btnRunTournament"
-        onclick="runTourney()">Run</button><br />
+        onclick="runTourney()">运行</button><br />
 
         <div id = "tournamentLabel">
         <p class="clean2">
-        <span id="tourneyDisplay">Pick strategy, run tournament, gain yomi</span><br />
+        <span id="tourneyDisplay">选择策略，运行锦标赛，获得约米</span><br />
         </p>
         </div>
 
@@ -538,18 +539,18 @@
 
             <tr>
                 <th>&nbsp;</th>
-                <th><span id= vLabela>Move A</span></th>
-                <th><span id= vLabelb>Move B</span></th>
+                <th><span id= vLabela>行动 A</span></th>
+                <th><span id= vLabelb>行动 B</span></th>
             </tr>
 
             <tr>
-                <td><span id= hLabela>Move A</span></td>
+                <td><span id= hLabela>行动 A</span></td>
                 <td id = "payoffCellAA"><span id = aaPayoffH>0</span>,<span id = aaPayoffV>0</span></td>
                 <td id = "payoffCellAB"><span id = abPayoffH>0</span>,<span id = abPayoffV>0</span></td>
 
             </tr>
             <tr>
-                <td><span id= hLabelb>Move B</span></td>
+                <td><span id= hLabelb>行动 B</span></td>
                 <td id = "payoffCellBA"><span id = baPayoffH>0</span>,<span id = baPayoffV>0</span></td>
                 <td id = "payoffCellBB"><span id = bbPayoffH>0</span>,<span id = bbPayoffV>0</span></td>
 
@@ -588,7 +589,7 @@
 
         </div>
 
-        <p class="engineText4">Yomi: <span id="yomiDisplay">0</span>
+        <p class="engineText4">约米: <span id="yomiDisplay">0</span>
         </p>
         </div>
 
@@ -596,22 +597,22 @@
 
         <div id = "tourneyButton">
         <button class = "button2" id = "btnNewTournament"
-        onclick="newTourney()"> &nbsp New Tournament &nbsp </button>
+        onclick="newTourney()"> &nbsp 新锦标赛 &nbsp </button>
         </div>
 
         <div id = "autoTourneyControl">
         <button class = "button2" id ="btnToggleAutoTourney"
-        onclick="toggleAutoTourney()">AutoTourney</button>
+        onclick="toggleAutoTourney()">自动锦标赛</button>
         </div>
 
         <div id = autoTourneyStatusDiv>
-        <span class = "engineText9" id = "autoTourneyStatus">ON</span>
+        <span class = "engineText9" id = "autoTourneyStatus">开启</span>
         </div>
 
 
 
         <br />
-        <p class = "engineText8">Cost: <span id="newTourneyCost">1,000</span> ops</p>
+        <p class = "engineText8">成本: <span id="newTourneyCost">1,000</span> 运算</p>
         </div>
 
 <!--       BATTLE-->
@@ -619,49 +620,49 @@
         <div id = "battleCanvasDiv">
         <canvas id = "canvas"></canvas>
         <div id = "battleInterfaceDiv">
-        <b>Combat</b><br />
+        <b>战斗</b><br />
 
         <p class="clean2">
 
-            <span id="battleName">Drifter Attack 1</span></p><br />
+            <span id="battleName">漂移者袭击 1</span></p><br />
 
         <div id = "victoryDiv">
 
-        <span id="battleResult">VICTORY</span>
+        <span id="battleResult">胜利</span>
         <p class="clean2">
-        <span id="battleResultSign">+</span><span id="honorAmount">200</span> honor
+        <span id="battleResultSign">+</span><span id="honorAmount">200</span> 荣誉
         </p>
 
         </div>
 
         <br /><br />
         <p class="clean2">
-        Scale = <span id="battleScale">1</span>:1<br />
+        比例 = <span id="battleScale">1</span>:1<br />
         </p>
         </div>
         </div>
 
         <div id = "honorDiv">
-        <p class="engineText4">Honor: <span id="honorDisplay">0</span></p>
+        <p class="engineText4">荣誉: <span id="honorDisplay">0</span></p>
         </div>
 
 <!--        POWER-->
 
         <div id="powerDiv">
-        <b>Power</b>
+        <b>能源</b>
         <hr>
-        Factory/Drone Performance: <span id="performance">0</span>%<br />
+        工厂/无人机性能: <span id="performance">0</span>%<br />
         <br />
-        Consumption: <span id="powerConsumptionRate">0</span> MWs<br />
+        消耗: <span id="powerConsumptionRate">0</span> 兆瓦<br />
         <p class = "clean">
-        Factories: <span id="facPowConRate">0</span> MWs<br />
-        Drones: <span id="dronePowConRate">0</span> MWs<br />
+        工厂: <span id="facPowConRate">0</span> 兆瓦<br />
+        无人机: <span id="dronePowConRate">0</span> 兆瓦<br />
         </p> <br />
 
-        Production: <span id="powerProductionRate">0</span> MWs<br />
+        生产: <span id="powerProductionRate">0</span> 兆瓦<br />
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeFarm"
-        onclick="makeFarm(1)">Solar Farm</button> <span class = "engineText6" id="farmLevel">0</span></p>
+        onclick="makeFarm(1)">太阳能农场</button> <span class = "engineText6" id="farmLevel">0</span></p>
 
         <div id = "farmMultiButtons">
 
@@ -675,19 +676,19 @@
 
         <span id = "farmRebootToolTip" class = "toolTipText3">0</span>
 
-        <button class = "button2" id = "btnFarmReboot" onclick="farmReboot()">&nbsp Disassemble All &nbsp</button>
+        <button class = "button2" id = "btnFarmReboot" onclick="farmReboot()">&nbsp 全部拆解 &nbsp</button>
 
         </div>
 
         </br>
 
-        Cost: <span id="farmCost">0</span> clips<br />
+        成本: <span id="farmCost">0</span> 回形针<br />
         <br />
 
-        Storage: <span id="storedPower">0</span> / <span id="maxStorage">0</span> MW-seconds<br />
+        储能: <span id="storedPower">0</span> / <span id="maxStorage">0</span> 兆瓦秒<br />
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeBattery"
-        onclick="makeBattery(1)">Battery Tower</button> <span class = "engineText6" id="batteryLevel">0</span></p>
+        onclick="makeBattery(1)">电池塔</button> <span class = "engineText6" id="batteryLevel">0</span></p>
 
 
         <div id = "batteryMultiButtons">
@@ -702,13 +703,13 @@
 
         <span id = "batteryRebootToolTip" class = "toolTipText3">0</span>
 
-        <button class = "button2" id = "btnBatteryReboot" onclick="batteryReboot()">&nbsp Disassemble All &nbsp</button>
+        <button class = "button2" id = "btnBatteryReboot" onclick="batteryReboot()">&nbsp 全部拆解 &nbsp</button>
 
         </div>
 
         </br>
 
-        Cost: <span id="batteryCost">0</span> clips<br />
+        成本: <span id="batteryCost">0</span> 回形针<br />
         <br />
 
         </div>
@@ -720,10 +721,10 @@
 
         <p class=engineText>
 
-            <b>Von Neumann Probe Design</b><br />
-        Trust:
+            <b>冯·诺依曼探测器设计</b><br />
+        信任:
         <span id="probeTrustUsedDisplay">0</span> / <span id="probeTrustDisplay">0</span>
-        (<span id="maxTrustDisplay">0</span> Max)<br />
+        (<span id="maxTrustDisplay">0</span> 最大)<br />
 
         </p>
 
@@ -735,9 +736,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Modifies rate of exploration</span>
+        <span class = "toolTipText2">修改探索速度</span>
 
-        Speed: <span id="probeSpeedDisplay">0</span>
+        速度: <span id="probeSpeedDisplay">0</span>
 
         </div><br />
 
@@ -750,9 +751,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Rate at which probes gain access to new matter</span>
+        <span class = "toolTipText2">探测器获取新物质的速度</span>
 
-        Exploration: <span id="probeNavDisplay">0</span>
+        探索: <span id="probeNavDisplay">0</span>
 
         </div><br />
 
@@ -763,9 +764,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Rate at which probes generate more probes (each new probe costs 100 quadrillion clips) </span>
+        <span class = "toolTipText2">探测器生成更多探测器的速度（每个新探测器消耗100千万亿回形针）</span>
 
-        Self-Replication: <span id="probeRepDisplay">0</span>
+        自我复制: <span id="probeRepDisplay">0</span>
 
         </div><br />
 
@@ -776,9 +777,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Reduces damage from dust, junk, radiation, and general entropic decay</span>
+        <span class = "toolTipText2">减少灰尘、垃圾、辐射和一般熵衰减造成的损害</span>
 
-        Hazard Remediation: <span id="probeHazDisplay">0</span>
+        危险修复: <span id="probeHazDisplay">0</span>
 
             </div>    <br />
 
@@ -789,9 +790,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Rate at which probes build factories (each new factory costs 100 million clips)</span>
+        <span class = "toolTipText2">探测器建造工厂的速度（每个新工厂消耗1亿回形针）</span>
 
-        Factory Production: <span id="probeFacDisplay">0</span>
+        工厂生产: <span id="probeFacDisplay">0</span>
 
             </div>    <br />
 
@@ -802,9 +803,9 @@
 
          <div class = "toolTip2">
 
-        <span class = "toolTipText2">Rate at which probes spawn Harvester Drones (each new drone costs 2 million clips)</span>
+        <span class = "toolTipText2">探测器生成采集无人机的速度（每个新无人机消耗200万回形针）</span>
 
-        Harvester Drone Production: <span id="probeHarvDisplay">0</span>
+        采集无人机生产: <span id="probeHarvDisplay">0</span>
 
             </div>     <br />
 
@@ -815,9 +816,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Rate at which probes spawn Wire Drones (each new drone costs 2 million clips)</span>
+        <span class = "toolTipText2">探测器生成制丝无人机的速度（每个新无人机消耗200万回形针）</span>
 
-        Wire Drone Production: <span id="probeWireDisplay">0</span>
+        制丝无人机生产: <span id="probeWireDisplay">0</span>
 
             </div>    <br />
 
@@ -830,9 +831,9 @@
 
         <div class = "toolTip2">
 
-        <span class = "toolTipText2">Determines offensive and defensive effectiveness in battle</span>
+        <span class = "toolTipText2">决定战斗中的进攻和防御效果</span>
 
-        Combat: <span id="probeCombatDisplay">0</span>
+        战斗: <span id="probeCombatDisplay">0</span>
 
 
             </div>    <br />
@@ -845,14 +846,14 @@
 
         <div class = enginetext1 id = "increaseProbeTrustDiv">
         <button class = "button2" id = "btnIncreaseProbeTrust"
-        onclick="increaseProbeTrust()">Increase Probe Trust</button><br />
-        <p class = "engineText8">Cost: <span id="probeTrustCostDisplay">0</span> yomi</p>
+        onclick="increaseProbeTrust()">增加探测器信任</button><br />
+        <p class = "engineText8">成本: <span id="probeTrustCostDisplay">0</span> 约米</p>
         </div>
 
         <div class = enginetext1 id = "increaseMaxTrustDiv">
         <button class = "button2" id = "btnIncreaseMaxTrust"
-        onclick="increaseMaxTrust()">Increase Max Trust</button><br />
-        <p class = "engineText8">Cost: <span id="maxTrustCostDisplay">91,117.99</span> honor</p>
+        onclick="increaseMaxTrust()">增加最大信任</button><br />
+        <p class = "engineText8">成本: <span id="maxTrustCostDisplay">91,117.99</span> 荣誉</p>
         </div>
 
 <!--

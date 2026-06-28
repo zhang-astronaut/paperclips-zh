@@ -166,7 +166,7 @@ Paperclips.game.onRender([
   endTimerLevel(6, 250, hideElement(creationDivElement)),
   endTimerLevel(6, 500, milestoneIs(15, chain([
     playThrenody,
-    () => displayMessage("Universal Paperclips"),
+    () => displayMessage("宇宙回形针"),
     incrementMilestone
   ]))),
   endTimerLevel(6, 600, milestoneIs(16, chain([
@@ -178,7 +178,7 @@ Paperclips.game.onRender([
     incrementMilestone
   ]))),
   endTimerLevel(6, 800, milestoneIs(18, chain([
-    () => displayMessage("'Riversong' by Tonto's Expanding Headband used by kind permission of Malcolm Cecil"),
+    () => displayMessage("'Riversong' 由 Tonto's Expanding Headband 创作，经 Malcolm Cecil 许可使用"),
     incrementMilestone
   ]))),
   endTimerLevel(6, 800, milestoneIs(18, chain([

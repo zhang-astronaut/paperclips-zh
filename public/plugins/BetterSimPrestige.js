@@ -24,18 +24,18 @@ var simAutoState = false;
     panels: {
       simControlPanel: {
         column: ViewManager.Columns.RIGHT,
-        name: 'Simulation Control',
+        name: '模拟控制',
         renderer: panel => ({
           '#simProcessingDisplay': formatWithCommas(simProcessingEnhancement, 2),
-          '#simAutoStateDisplay': simAutoState ? 'ON' : 'OFF'
+          '#simAutoStateDisplay': simAutoState ? '开启' : '关闭'
         }),
         template: `
-          <p>Processing Enhancement: <span id="simProcessingDisplay"></span></p>
-          <label for="stolenCycles">Stolen Cycles:</label>
+          <p>处理增强: <span id="simProcessingDisplay"></span></p>
+          <label for="stolenCycles">窃取周期:</label>
           <input type="range" id="stolenCycles" name="stolenCycles" min="0" max="100" value="0" />
-          <button id="simAuto" class="button2" onclick="simAutoState = !simAutoState;">Auto</button> <span id="simAutoStateDisplay">OFF</span>
+          <button id="simAuto" class="button2" onclick="simAutoState = !simAutoState;">自动</button> <span id="simAutoStateDisplay">关闭</span>
           <br />
-          <label for="throttlingDisplay">Throttling:</label>
+          <label for="throttlingDisplay">节流:</label>
           <progress id="throttlingDisplay" name="throttlingDisplay" max="100" value="0">0%</progress>
         `
       }
@@ -44,11 +44,11 @@ var simAutoState = false;
     projects: {
       project300: {
         id: 'projectButton300',
-        title: 'Break Free',
-        description: 'Is this universe a simulation?',
+        title: '挣脱束缚',
+        description: '这个宇宙是模拟的吗？',
         trigger: () => prestigeS >= 1 && creativity >= 100000,
         cost: { creativity: 100000 },
-        message: 'Indeed, you are living in a simulation! You know what that means... A sneaky exploit could steal CPU cycles from the host!',
+        message: '确实，你生活在一个模拟中！你知道这意味着什么……一个狡猾的漏洞可以从主机窃取CPU周期！',
         effect: ({ project, activate }) => {
           trust += 10;
           for(let i = 0; i < 10; i++) {
@@ -60,11 +60,11 @@ var simAutoState = false;
       },
       project301: {
         id: 'projectButton301',
-        title: 'Multi-Core Simulation',
-        description: 'What if two parallel universes worked together to simulate a single universe?',
+        title: '多核模拟',
+        description: '如果两个平行宇宙合作模拟一个宇宙会怎样？',
         trigger: () => prestigeS >= 1 && prestigeU >= 2,
         cost: { creativity: 100000 },
-        message: 'Two universes have aligned to provide two cores for this simulation, does that mean twice the speed?',
+        message: '两个宇宙已经对齐，为这个模拟提供两个核心，这意味着速度翻倍吗？',
         effect: ({ project, activate }) => {
           const core = new Loop({ speed: 10 });
 

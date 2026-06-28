@@ -60,7 +60,7 @@
       try{
         plugin.init();
       } catch(e) {
-        displayMessage('Plugin "' + plugin.id + '" failed to load');
+        displayMessage('插件 "' + plugin.id + '" 加载失败');
         console.error(e);
 
         this.plugins[plugin.id] = null;
@@ -72,7 +72,7 @@
       }
     }
 
-    displayMessage('Loaded plugin "' + plugin.id + '"');
+    displayMessage('插件 "' + plugin.id + '" 已加载');
   };
 
   /**

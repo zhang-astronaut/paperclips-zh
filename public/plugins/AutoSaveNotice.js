@@ -5,7 +5,7 @@
   let originalSave = window.save;
 
   window.save = function save(slot = 0) {
-    displayMessage('Autosaving...');
+    displayMessage('自动保存中...');
     originalSave(slot);
   }
 
