@@ -31,7 +31,6 @@ var trust = 2;
 var nextTrust = 3000;
 var transaction = 1;
 var clipperBoost = 1;
-var blinkCounter = 0;
 var creativity = 0;
 var creativityOn = false;
 var safetyProjectOn = false;

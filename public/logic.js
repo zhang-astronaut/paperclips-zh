@@ -249,7 +249,6 @@ function save( slotNumber = 0 ) {
         nextTrust: nextTrust,
         transaction: transaction,
         clipperBoost: clipperBoost,
-        blinkCounter: blinkCounter,
         creativity: creativity,
         creativityOn: creativityOn,
         safetyProjectOn: safetyProjectOn,
@@ -540,7 +539,6 @@ function load( slotNumber = 0 ) {
         nextTrust = loadGame.nextTrust;
         transaction = loadGame.transaction;
         clipperBoost = loadGame.clipperBoost;
-        blinkCounter = loadGame.blinkCounter;
         creativity = loadGame.creativity;
         creativityOn = loadGame.creativityOn;
         safetyProjectOn = loadGame.safetyProjectOn;
@@ -1698,7 +1696,10 @@ function manageProjects(){
   for(var i = 0; i < activeProjects.length; i++){
     let project = activeProjects[i];
 
-    project.element.disabled = !canAfford(project.cost);
+    var newDisabled = !canAfford(project.cost);
+    if (project.element.disabled !== newDisabled) {
+      project.element.disabled = newDisabled;
+    }
   }
 }
 
@@ -1821,17 +1822,14 @@ function displayMessage(msg){
 // BLINK
 
 function blink(element){
-
-    {
-        var handle = setInterval(function () { toggleVisibility(element)}, 30);
-    }
+    var counter = 0;
+    var handle = setInterval(function () { toggleVisibility(element)}, 30);
 
     function toggleVisibility(element){
-    blinkCounter = blinkCounter+1;
+    counter = counter + 1;
 
-    if (blinkCounter >= 12){
+    if (counter >= 12){
         clearInterval(handle);
-        blinkCounter = 0;
         element.style.visibility = "visible";
     } else {
         if (element.style.visibility != "hidden"){
@@ -1841,8 +1839,7 @@ function blink(element){
         }
       }
     }
-
-    }
+}
 
 
 
